@@ -5,3 +5,5 @@ console.log('--- Main Module---');
 config.feature_1 = 'Feature 1 config';
 console.log('Config it self', config);
 logConfig('Feature 1');
+
+console.log('"this" keyword value', this);

@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/core */ \"./src/scripts/core.js\");\n/* harmony import */ var _scripts_module_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/module-1 */ \"./src/scripts/module-1.js\");\n\n\n\nconsole.log('--- Main Module---');\n_scripts_core__WEBPACK_IMPORTED_MODULE_0__.config.feature_1 = 'Feature 1 config';\nconsole.log('Config it self', _scripts_core__WEBPACK_IMPORTED_MODULE_0__.config);\n(0,_scripts_core__WEBPACK_IMPORTED_MODULE_0__.logConfig)('Feature 1');\n\n\n//# sourceURL=webpack://webpack-bundler/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scripts_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scripts/core */ \"./src/scripts/core.js\");\n/* harmony import */ var _scripts_module_1__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/module-1 */ \"./src/scripts/module-1.js\");\n\n\n\nconsole.log('--- Main Module---');\n_scripts_core__WEBPACK_IMPORTED_MODULE_0__.config.feature_1 = 'Feature 1 config';\nconsole.log('Config it self', _scripts_core__WEBPACK_IMPORTED_MODULE_0__.config);\n(0,_scripts_core__WEBPACK_IMPORTED_MODULE_0__.logConfig)('Feature 1');\n\nconsole.log('\"this\" keyword value', undefined);\n\n//# sourceURL=webpack://webpack-bundler/./src/index.js?");
 
 /***/ }),
 
