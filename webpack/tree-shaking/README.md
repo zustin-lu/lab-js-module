@@ -9,6 +9,7 @@ Some references during my learning process:
 
 ## Usage
 
+- Run `npm i` to install `node_modules`
 - `cd` to `webpack` folder
 - Run `npm run build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
 - Inspect output bundled files
