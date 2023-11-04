@@ -10,7 +10,7 @@ Some references during my learning process:
 ## Usage
 
 - `cd` to `webpack` folder
-- Run `build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
+- Run `npm run build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
 - Inspect output bundled files
 - Inside `dist/esm.bundle.js`, you would find `unused harmony export largeFunc` comment which added a notice to webpack minimizers that `largeFunc` unused and should be remove in production bundle.
 - Inside `dist/cjs.bundle.js`, we didn't find something notice that the code could be eliminate later.
