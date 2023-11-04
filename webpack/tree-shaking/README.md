@@ -29,7 +29,7 @@ You can see the final bundle fully optimized by changing the `mode` property in 
 
 CommonJS exports are resolved at runtime because CommonJS is designed to work in a synchronous, blocking manner, particularly in server-side environments like Node.js. CommonJS modules are required to import modules, and exports can be dynamically modified during **runtime**. This dynamic nature makes it difficult for static analysis to determine which parts of the code are used and which are not.
 
-> The bundled file size was not tree-shaking because CommonJS and bundled size were still larger than expected because it was not tree-shakable.
+> The bundled file size didn't undergo tree-shaking as intended, bundled sizes remained larger than anticipated due to their non-tree-shakable nature.
 
 **ESModule**
 
@@ -63,7 +63,7 @@ In the context of JavaScript modules, static analysis plays a crucial role in un
 
 Static analysis is a powerful technique for ensuring code quality, improving performance, and reducing the likelihood of runtime errors, and it's an integral part of modern software development practices.
 
-### ESModule vs CommonJS in module system design - Comparison
+### ESModule vs CommonJS module system design - Comparison
 
 **ES Modules (ESM)**
 
