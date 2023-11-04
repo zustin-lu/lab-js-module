@@ -38,7 +38,7 @@ With `Static Analytic` oriented module system design. Imports and exports are an
 This allows tools like bundlers and transpilers to understand the module dependencies and optimize the bundling process during development.
 This analysis can help eliminate dead code, tree-shake unused modules, and perform various optimizations.
 
-> The bundled file size was smaller than expected because tree-shaking was eliminated from the unused code.
+> The bundled file size was smaller than expected because tree-shaking eliminated unused code from the code.
 
 ---
 ## Some other knowledge that I found when learning about tree-shaking
