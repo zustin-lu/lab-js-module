@@ -29,7 +29,7 @@ You can see the final bundle fully optimized by changing the `mode` property in 
 
 CommonJS exports are resolved at runtime because CommonJS is designed to work in a synchronous, blocking manner, particularly in server-side environments like Node.js. CommonJS modules are required to import modules, and exports can be dynamically modified during **runtime**. This dynamic nature makes it difficult for static analysis to determine which parts of the code are used and which are not.
 
->> The bundled file size was not tree-shaking because CommonJS and bundled size were still larger than expected because it was not tree-shakable.
+> The bundled file size was not tree-shaking because CommonJS and bundled size were still larger than expected because it was not tree-shakable.
 
 **ESModule**
 
@@ -38,7 +38,7 @@ With `Static Analytic` oriented module system design. Imports and exports are an
 This allows tools like bundlers and transpilers to understand the module dependencies and optimize the bundling process during development.
 This analysis can help eliminate dead code, tree-shake unused modules, and perform various optimizations.
 
->> The bundled file size was smaller than expected because tree-shaking was eliminated from the unused code.
+> The bundled file size was smaller than expected because tree-shaking was eliminated from the unused code.
 
 ---
 ## Some other knowledge that I found when learning about tree-shaking
