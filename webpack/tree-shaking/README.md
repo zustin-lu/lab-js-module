@@ -1,5 +1,9 @@
 # Testing Tree-shaking with commonJS
 
+I created this example with the purpose to have more understanding about **How to build tree-shakable** when I'm building my personal UI library `@justinlu/web-ui`
+
+Some references during my learning process:
+
 - Webpack document: https://webpack.js.org/guides/tree-shaking/
 - Reference blog: https://cube.dev/blog/how-to-build-tree-shakeable-javascript-libraries
 
@@ -8,14 +12,14 @@
 - `cd` to `webpack` folder
 - Run `build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
 - Inspect output bundled files
-- With ESModule, you would find `unused harmony export largeFunc` comment, that noted that `largeFunc` will be remove in the minification phase of webpack.
-- With CommonJS, we didn't find something notice that the code could be eliminate later.
+- Inside `dist/esm.bundle.js`, you would find `unused harmony export largeFunc` comment, that noted that `largeFunc` will be remove in the minification phase of webpack.
+- Inside `dist/cjs.bundle.js`, we didn't find something notice that the code could be eliminate later.
 
 ### How to see the final result?
 
 You could see the final bundle with fully optimized by change the `mode` property in `webpack.config.js` to `production`
 
-## Observed Result on Production build
+## What I see via this example?
 
 **CommonJS**
 
@@ -33,6 +37,7 @@ This analysis can help eliminate dead code, tree-shake unused modules, and perfo
 >> Bundled file size smaller as expected because of tree-shaking was eliminated the unused code.
 
 ---
+## Some other knowledge that I found when learning about tree-shaking
 
 ### Static analysis
 
