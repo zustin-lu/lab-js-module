@@ -10,6 +10,10 @@ Reference blog: https://cube.dev/blog/how-to-build-tree-shakeable-javascript-lib
 - With ESModule, you would find `unused harmony export largeFunc` comment, that noted that `largeFunc` will be remove in the minification phase of webpack.
 - With CommonJS, we didn't find something notice that the code could be eliminate later.
 
+### How to see the final result?
+
+You could see the final bundle with fully optimized by change the `mode` property in `webpack.config.js` to `production`
+
 ## Observed Result on Production build
 
 **CommonJS**
