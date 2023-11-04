@@ -10,14 +10,14 @@ Some references during my learning process:
 ## Usage
 
 - `cd` to `webpack` folder
-- Run `npm i` to install `node_modules`
-- Run `npm run build:tree-shaking` command in your terminal  
+- Run the `npm i` command to install `node_modules`
+- Run the `npm run build:tree-shaking` command in your terminal  
 (You can refer to other commands inside `package.json`)
 - Inspect output bundled files
 - Inside `dist/esm.bundle.js`  
-You would find the `unused harmony export largeFunc` comment which added a notice to webpack minimizers that `largeFunc` is unused and should be removed in the production bundle.
+You would find the `unused harmony export largeFunc` comment which added a notice to webpack minimizers that `largeFunc` is unused and should be removed from the production bundle.
 - Inside `dist/cjs.bundle.js`  
-You won't find something to notice that the code could be eliminated later.
+You won't find something to annotate that the code could be eliminated later.
 
 ### How do you see the final result?
 
