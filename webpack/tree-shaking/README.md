@@ -5,8 +5,9 @@
 
 ## Usage
 
-- Run the build script on this folder in webpack development build mode
-- Inspect output bundles
+- `cd` to `webpack` folder
+- Run `build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
+- Inspect output bundled files
 - With ESModule, you would find `unused harmony export largeFunc` comment, that noted that `largeFunc` will be remove in the minification phase of webpack.
 - With CommonJS, we didn't find something notice that the code could be eliminate later.
 
