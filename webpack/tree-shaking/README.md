@@ -1,7 +1,7 @@
 # Testing Tree-shaking with commonJS
 
-Webpack document: https://webpack.js.org/guides/tree-shaking/
-Reference blog: https://cube.dev/blog/how-to-build-tree-shakeable-javascript-libraries
+- Webpack document: https://webpack.js.org/guides/tree-shaking/
+- Reference blog: https://cube.dev/blog/how-to-build-tree-shakeable-javascript-libraries
 
 ## Usage
 
