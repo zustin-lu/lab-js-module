@@ -1,6 +1,6 @@
-# Testing Tree-shaking with commonJS
+# Testing Tree-shaking with CommonJS
 
-I created this example with the purpose to have more understanding about **How to build tree-shakable library** when I'm building my personal UI library `@justinlu/web-ui`
+I created this example with the purpose of have more understanding about **How to build tree-shakable library** when I'm building my personal UI library `@justinlu/web-ui`
 
 Some references during my learning process:
 
@@ -9,24 +9,27 @@ Some references during my learning process:
 
 ## Usage
 
-- Run `npm i` to install `node_modules`
 - `cd` to `webpack` folder
-- Run `npm run build:tree-shaking` command in your terminal (You can refer other commands inside `package.json`)
+- Run `npm i` to install `node_modules`
+- Run `npm run build:tree-shaking` command in your terminal  
+(You can refer to other commands inside `package.json`)
 - Inspect output bundled files
-- Inside `dist/esm.bundle.js`, you would find `unused harmony export largeFunc` comment which added a notice to webpack minimizers that `largeFunc` unused and should be remove in production bundle.
-- Inside `dist/cjs.bundle.js`, we didn't find something notice that the code could be eliminate later.
+- Inside `dist/esm.bundle.js`  
+You would find the `unused harmony export largeFunc` comment which added a notice to webpack minimizers that `largeFunc` is unused and should be removed in the production bundle.
+- Inside `dist/cjs.bundle.js`  
+You won't find something to notice that the code could be eliminated later.
 
-### How to see the final result?
+### How do you see the final result?
 
-You could see the final bundle with fully optimized by change the `mode` property in `webpack.config.js` to `production`
+You can see the final bundle fully optimized by changing the `mode` property in `webpack.config.js` to `production`
 
-## What I see via this example?
+## What do I see via this example?
 
 **CommonJS**
 
-CommonJS exports are resolved at runtime because CommonJS is designed to work in a synchronous, blocking manner, particularly in server-side environments like Node.js. CommonJS modules use require to import modules, and exports can be dynamically modified during **runtime**. This dynamic nature makes it difficult for static analysis to determine which parts of the code are used and which are not.
+CommonJS exports are resolved at runtime because CommonJS is designed to work in a synchronous, blocking manner, particularly in server-side environments like Node.js. CommonJS modules are required to import modules, and exports can be dynamically modified during **runtime**. This dynamic nature makes it difficult for static analysis to determine which parts of the code are used and which are not.
 
->> Bundled file size was not tree-shaking because CommonJS and bundled size still larger than expectation because it was not tree-shakable.
+>> The bundled file size was not tree-shaking because CommonJS and bundled size were still larger than expected because it was not tree-shakable.
 
 **ESModule**
 
@@ -35,14 +38,14 @@ With `Static Analytic` oriented module system design. Imports and exports are an
 This allows tools like bundlers and transpilers to understand the module dependencies and optimize the bundling process during development.
 This analysis can help eliminate dead code, tree-shake unused modules, and perform various optimizations.
 
->> Bundled file size smaller as expected because of tree-shaking was eliminated the unused code.
+>> The bundled file size was smaller than expected because tree-shaking was eliminated from the unused code.
 
 ---
 ## Some other knowledge that I found when learning about tree-shaking
 
 ### Static analysis
 
-`Static analysis` refers to the process of examining and understanding code without actually executing it. It involves analyzing the structure and content of the code to extract information about its behavior, dependencies, and potential issues. This analysis is performed at compile or build time, before the code is executed, and it's a critical step in various software development processes, including type checking, linting, and optimizing.
+`Static analysis` refers to examining and understanding code without actually executing it. It involves analyzing the structure and content of the code to extract information about its behavior, dependencies, and potential issues. This analysis is performed at compile or build time before the code is executed, and it's a critical step in various software development processes, including type checking, linting, and optimizing.
 
 Here are some key points to help you understand static analysis better:
 
@@ -56,7 +59,7 @@ Here are some key points to help you understand static analysis better:
 
 - Optimizations: Static analysis can help identify opportunities for code optimizations, like dead code elimination (removing code that is never executed) and inlining (replacing function calls with the actual code). This leads to smaller, more efficient code bundles.
 
-In the context of JavaScript modules, static analysis plays a crucial role in understanding how modules depend on each other and in optimizing the final bundled code. For example, tools like Webpack or Rollup use static analysis to determine which modules are actually used in a project and exclude the unused code during the bundling process. This is commonly referred to as "tree-shaking."
+In the context of JavaScript modules, static analysis plays a crucial role in understanding how modules depend on each other and in optimizing the final bundled code. For example, tools like Webpack or Rollup use static analysis to determine which modules are actually used in a project and exclude unused code during the bundling process. This is commonly referred to as "tree-shaking."
 
 Static analysis is a powerful technique for ensuring code quality, improving performance, and reducing the likelihood of runtime errors, and it's an integral part of modern software development practices.
 
