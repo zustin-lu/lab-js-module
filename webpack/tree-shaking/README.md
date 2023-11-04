@@ -1,6 +1,6 @@
 # Testing Tree-shaking with commonJS
 
-I created this example with the purpose to have more understanding about **How to build tree-shakable** when I'm building my personal UI library `@justinlu/web-ui`
+I created this example with the purpose to have more understanding about **How to build tree-shakable library** when I'm building my personal UI library `@justinlu/web-ui`
 
 Some references during my learning process:
 
