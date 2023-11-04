@@ -6,16 +6,15 @@
   "scripts": {
     "build:test-module-evaluation": "webpack --mode=development --config=./test-module-evaluation/webpack.config.js",
     "build:bundle-esmodule": "webpack --mode=development --config=./bundle-esmodule/webpack.config.js",
-    "build:bundle-commonjs": "webpack --mode=development --config=./bundle-commonjs/webpack.config.js"
+    "build:bundle-commonjs": "webpack --mode=development --config=./bundle-commonjs/webpack.config.js",
+    "build:tree-shaking": "webpack --config=./tree-shaking/webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
     "webpack-cli": "^5.1.4"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
   }
 }
